@@ -1,0 +1,1 @@
+# teltonika-openwrt-tuyad
