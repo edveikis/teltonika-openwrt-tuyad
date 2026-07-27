@@ -1,0 +1,15 @@
+{
+  "services/tuyad": {
+    "description": "Tuya daemon permissions",
+    "read": {
+      "api": [
+        "/tuyad/*"
+      ]
+    },
+    "write": {
+      "api": [
+        "/tuyad/*"
+      ]
+    }
+  }
+}

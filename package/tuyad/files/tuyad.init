@@ -1,0 +1,32 @@
+#!/bin/sh /etc/rc.common
+
+USE_PROCD=1
+
+START=99
+STOP=10
+
+PROG="/usr/bin/tuyad"
+
+start_service() {
+    local enabled
+    config_load 'tuyad'
+    config_get enabled 'main' 'enabled' '0'
+
+	if [ "$enabled" -eq 1 ]; then
+        procd_open_instance
+        procd_set_param command "$PROG"
+        procd_set_param respawn
+        procd_set_param stdout 1
+        procd_set_param stderr 1
+        procd_close_instance
+    fi
+}
+
+service_triggers() {
+    procd_add_reload_trigger "tuyad"
+}
+
+reload_service() {
+	stop
+	start
+}
