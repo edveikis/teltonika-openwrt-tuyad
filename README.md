@@ -12,10 +12,10 @@ This repository packages the Tuya IoT daemon for the OpenWrt/RutOS build system.
 
 ## 📦 Packages
 
-- 🧩 **`tuyad`** — the daemon itself, built from the `src/` sources in this repo
-- 🔐 **`libtuyacore`** — the Tuya IoT Core SDK, fetched from its upstream git repo and patched to build shared libraries instead of static ones
-- 🧮 **`libcjson`** — the cJSON library, fetched from its upstream git repo
-- 🌐 **`vuci-app-tuyad`** — a VuCI backend API package exposing `tuyad` configuration over `/tuyad/*` REST endpoints (no front-end)
+- 🧩 **`tuyad`** - the daemon itself, built from the `src/` sources in this repo
+- 🔐 **`libtuyacore`** - the Tuya IoT Core SDK, fetched from its upstream git repo and patched to build shared libraries instead of static ones
+- 🧮 **`libcjson`** - the cJSON library, fetched from its upstream git repo
+- 🌐 **`vuci-app-tuyad`** - a VuCI backend API package exposing `tuyad` configuration over `/tuyad/*` REST endpoints (no front-end)
 
 ## ✨ Features
 
@@ -49,10 +49,10 @@ make package/tuyad/compile V=s
 
 ## 📁 Package Layout
 
-- `package/tuyad/` — daemon source, init script, and default UCI config
-- `package/libtuyacore/` — Makefile plus a patch that switches the SDK's CMake targets from `STATIC` to `SHARED` libraries
-- `package/libcjson/` — Makefile fetching and building cJSON as a shared library
-- `package/feeds/vuci/vuci-app-tuyad/` — VuCI Lua API service definition, ACL rules, and API path mapping for `tuyad`
+- `package/tuyad/` - daemon source, init script, and default UCI config
+- `package/libtuyacore/` - Makefile plus a patch that switches the SDK's CMake targets from `STATIC` to `SHARED` libraries
+- `package/libcjson/` - Makefile fetching and building cJSON as a shared library
+- `package/feeds/vuci/vuci-app-tuyad/` - VuCI Lua API service definition, ACL rules, and API path mapping for `tuyad`
 
 ## ▶️ Usage
 
